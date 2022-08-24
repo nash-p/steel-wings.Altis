@@ -66,6 +66,7 @@ _checkComplete_Tsk = {
 
 };
 
+NSH_TASK_COUNT = NSH_TASK_COUNT + 1;
 _handleCheckComplete = [_taskID] spawn _checkComplete_Tsk;
 
 

@@ -26,5 +26,16 @@ publicVariable "NSH_SPAWN_AIR_LIST";
 
 //Classnames
 //Filler aircraft, should be fixed wing with AGM and AAM weapons
-genericAirEnemy = "I_Plane_Fighter_04_F";			
-publicVariable genericAirEnemy;
+NSH_genericAirEnemy = "I_Plane_Fighter_04_F";			
+publicVariable "NSH_genericAirEnemy";
+
+//Filler ground targets, mostly used for CAS/Strike missions
+NSH_genericGroundEnemies = ["I_soldier_F"];
+
+//If composition file is empty then use the above defaults
+private _comp = preprocessFile "comps\genericGroundEnemies.sqf";
+if (_comp == "") then {
+	systemChat str format ["INFO: genericGroundEnemies.sqf is empty falling back to defaults"]
+} else {
+	NSH_genericGroundEnemies append ( call compile _comp)};
+publicVariable "NSH_genericGroundEnemies";

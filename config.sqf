@@ -10,10 +10,21 @@
 //There should be one in each 10Km² except for near the player base
 NSH_SPAWN_AIR_LIST = [
 	spawn_AIR_CEN, 
-	spawn_AIR_W, 
-	spawn_AIR_NE, 
 	spawn_AIR_N, 
+	spawn_AIR_NE, 
 	spawn_AIR_NW, 
-	spawn_AIR_SW
+	spawn_AIR_S, 
+	spawn_AIR_SW,
+	spawn_AIR_E,
+	spawn_AIR_W
 	];
 publicVariable "NSH_SPAWN_AIR_LIST";
+
+
+
+
+
+//Classnames
+//Filler aircraft, should be fixed wing with AGM and AAM weapons
+genericAirEnemy = "I_Plane_Fighter_04_F";			
+publicVariable genericAirEnemy;

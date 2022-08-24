@@ -19,8 +19,7 @@ for "_i" from 1 to _amount do {
 };
 
 _wp = _group addWaypoint [_dest, 500];
-createGuardedPoint [_side, _dest, -1, objNull];
-_wp setWaypointType "GUARD";
+_wp setWaypointType "MOVE";
 systemChat str format ["LOG: Spawned enemy %1 at %2 headed to %3", _class, _spawn, _dest];
 _group;
 

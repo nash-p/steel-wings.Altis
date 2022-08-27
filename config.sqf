@@ -32,6 +32,9 @@ publicVariable "NSH_genericAirEnemy";
 //Filler ground targets, mostly used for CAS/Strike missions
 NSH_genericGroundEnemies = ["I_soldier_F"];
 
+//Filler ground friendlies, mostly used for CAS/Strike missions
+NSH_genericGroundFriends = ["B_Soldier_F"];
+
 //If composition file is empty then use the above defaults
 private _comp = preprocessFile "comps\genericGroundEnemies.sqf";
 if (_comp == "") then {
@@ -39,3 +42,10 @@ if (_comp == "") then {
 } else {
 	NSH_genericGroundEnemies append ( call compile _comp)};
 publicVariable "NSH_genericGroundEnemies";
+
+private _comp = preprocessFile "comps\genericGroundFriends.sqf";
+if (_comp == "") then {
+	systemChat str format ["INFO: genericGroundFriends.sqf is empty falling back to defaults"]
+} else {
+	NSH_genericGroundFriends append ( call compile _comp)};
+publicVariable "genericGroundFriends";

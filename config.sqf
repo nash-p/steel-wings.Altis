@@ -5,6 +5,8 @@
 
 */
 
+NSH_PLANE = fighter0;
+publicVariable "NSH_PLANE";
 
 //Basically spawn points for air units 
 //There should be one in each 10Km² except for near the player base

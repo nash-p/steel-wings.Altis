@@ -8,4 +8,4 @@ publicVariable "NSH_TASK_COUNT";
 
 missionNamespace setVariable ["activeMission", false];
 
-
+{_x setMarkerAlpha 0} forEach allMapMarkers;

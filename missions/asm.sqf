@@ -19,7 +19,6 @@ private _dest = getMarkerPos _siteMark;
 
 
 private _spawnPoints = [];
-private _found = false;
 private _spawn = "";
 
 {_spawnPoints pushBackUnique (position _x)} forEach NSH_SPAWN_AIR_LIST;
@@ -29,7 +28,7 @@ private _spawn = "";
 	[_dest],
 	{_x distance2D _input0},
 	"DESCEND",
-	{(_x distance2D _input0) < 25000}
+	{(_x distance2D _input0) < 20000}
 
 ] call BIS_fnc_sortBy;
 

@@ -1,10 +1,10 @@
-params ["_spawn", "_dest"];
+params ["_spawn", "_dest", "_class", "_amount"];
 
 
 private _spawn = _this param [0];
 private _dest = _this param [1];
-private _class = NSH_genericAirEnemy;
-private _amount = 2;
+private _class = _this param [2, NSH_genericAirFighter];
+private _amount = _this param [3, 2];
 private _side = independent;
 
 _group = createGroup _side;

@@ -8,6 +8,9 @@
 NSH_PLANE = fighter0;
 publicVariable "NSH_PLANE";
 
+NSH_ENEMYSIDE = [independent];
+publicVariable "NSH_ENEMYSIDE";
+
 //Basically spawn points for air units 
 //There should be one in each 10Km² except for near the player base
 NSH_SPAWN_AIR_LIST = [
@@ -27,9 +30,13 @@ publicVariable "NSH_SPAWN_AIR_LIST";
 
 
 //Classnames
-//Filler aircraft, should be fixed wing with AGM and AAM weapons
-NSH_genericAirEnemy = "I_Plane_Fighter_04_F";			
-publicVariable "NSH_genericAirEnemy";
+//Filler aircraft, should be fixed wing with some AAM weapons
+NSH_genericAirFighter = "I_Plane_Fighter_04_F";			
+publicVariable "NSH_genericAirFighter";
+
+//Filler aircraft, should be fixed wing with mostly AG weapons
+NSH_genericAirAttacker = "I_Plane_Fighter_03_dynamicLoadout_F";
+publicVariable "NSH_genericAirAttacker";
 
 //Filler ground targets, mostly used for CAS/Strike missions
 NSH_genericGroundEnemies = ["I_soldier_F"];

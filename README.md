@@ -1,9 +1,15 @@
 -Mission: STEEL WINGS
+
 -Players: 1 (for now)
+
 -Type: Air Mission
+
 -Difficulty: Meh
+
 -Estimated playtime: ???
+
 -Mods Required: None
+
 -Mod Support: Planned. None currently
 
 -Current Version: 0.01
